@@ -2,6 +2,7 @@ package utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
@@ -29,7 +30,7 @@ public class BaseTest extends Driver {
 
 	@Parameters({"browser", "url"})
 	@BeforeClass(alwaysRun=true)
-	public void setup(String browser, String url) {
+	public void setup(String browser, String url) throws MalformedURLException {
 		
 		driver = initDriver(browser);
 		driver.get(url);

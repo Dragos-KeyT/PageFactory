@@ -10,7 +10,7 @@
     	<parameter name="url" value="https://keyfood.ro" />
         
         <classes>
-            <class name="tests.CannotPostOrderWithoutBillingAdressTest" ></class>
+            <class name="tests.LoginTest" ></class>
         </classes>
         
     </test>  

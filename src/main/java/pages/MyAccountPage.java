@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import utils.SeleniumWrappers;
 
@@ -14,11 +15,13 @@ public class MyAccountPage extends SeleniumWrappers{
 	public MyAccountPage(WebDriver driver) {
 		//this.driver = driver;
 		super(driver);
+		PageFactory.initElements(driver, this);
+
 	}
 	
 	//public By usernameField = By.id("username");
 	
-	@FindBy(id = "username")public WebElement usernameFiled;
+	@FindBy(id = "username")public WebElement usernameField;
 	//public By passwordField = By.id("password");	
 	@FindBy(id = "password")public WebElement passwordField;
 
@@ -35,18 +38,15 @@ public class MyAccountPage extends SeleniumWrappers{
 	@FindBy(linkText ="Log out") public WebElement logoutButton;
 
 	
-	
-	
-	
 	public void loginInApp(String user, String pass) {
 		sendKeys(usernameField, user);
 		sendKeys(passwordField, pass);
 		click(loginButton);
 	}
 	
-	public boolean loginMsgIsDisplayed(By locator) {
+	public boolean loginMsgIsDisplayed(WebElement element) {
 		
-		return driver.findElement(locator).isDisplayed();
+		return element.isDisplayed();
 	}
 	
 }

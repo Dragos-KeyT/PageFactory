@@ -6,7 +6,7 @@
     	<parameter name="invalidUser" value="invalidUser" />
     	<parameter name="invalidPass" value="invalidPass" />
     	
-    	<parameter name="browser" value="chrome" />
+    	<parameter name="browser" value="firefox" />
     	<parameter name="url" value="https://keyfood.ro" />
         
         <classes>
