@@ -16,6 +16,13 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+/**
+ * 
+ * Class scope is to instantiate the WebDriver object on Chrome, Firefox and Edge
+ * 
+ * @author dragostanta
+ *
+ */
 public class Driver {
 	
 	
@@ -31,7 +38,7 @@ public class Driver {
 		//	driver.set(new ChromeDriver());
 			
 			ChromeOptions option = new ChromeOptions();
-			option.addArguments("--headless");
+		//	option.addArguments("--headless");
 			option.addArguments("--window-size=1920,1080");
 			
 			
@@ -49,7 +56,7 @@ public class Driver {
 			//driver.set(new FirefoxDriver());
 			
 			FirefoxBinary firefoxBinary = new FirefoxBinary();
-			firefoxBinary.addCommandLineOptions("--headless");
+			//firefoxBinary.addCommandLineOptions("--headless");
 			FirefoxOptions firefoxOption =  new FirefoxOptions();
 			firefoxOption.setBinary(firefoxBinary);
 

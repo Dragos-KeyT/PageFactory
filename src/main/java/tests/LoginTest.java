@@ -12,7 +12,7 @@ import utils.BaseTest;
 public class LoginTest extends BaseTest {
 
 	@Parameters({"user", "pass"})
-	@Test(priority =1)
+	@Test(priority =1, groups = "LoginFunctionality")
 	public void validLoginTest(String user, String pass) {
 		
 		MenuPage menu =  new MenuPage(driver);
